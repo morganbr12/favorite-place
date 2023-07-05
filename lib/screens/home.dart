@@ -59,6 +59,21 @@ class PlacesList extends StatelessWidget {
               builder: (ctx) => PlaceDetailsScreen(place: place),
             ),
           ),
+          contentPadding: const EdgeInsets.all(10),
+          leading: Container(
+            width: 80,
+            height: double.maxFinite,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.file(
+                place.image,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           title: Text(
             place.name,
             style: TextStyle(
