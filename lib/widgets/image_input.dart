@@ -33,8 +33,6 @@ class _ImageInputState extends State<ImageInput> {
     });
 
     widget.onPickImage(_selectedPicture!);
-
-    print(image);
   }
 
   @override

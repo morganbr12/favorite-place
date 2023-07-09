@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:favorite_places/model/saved_places.dart';
 import 'package:favorite_places/widgets/image_input.dart';
-import 'package:favorite_places/widgets/theme.dart';
+import 'package:favorite_places/widgets/location_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -46,7 +46,6 @@ class _AddNewProductState extends ConsumerState<AddNewProduct> {
     ref
         .read(userPlacesProvider.notifier)
         .addPlace(enteredTitle, _selectedImage!);
-    print(_titleController);
     Navigator.pop(context);
   }
 
@@ -87,6 +86,10 @@ class _AddNewProductState extends ConsumerState<AddNewProduct> {
                   _selectedImage = image;
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              const LocationInput(),
               const SizedBox(
                 height: 10,
               ),
