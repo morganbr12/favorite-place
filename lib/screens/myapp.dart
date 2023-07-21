@@ -1,5 +1,6 @@
 import 'package:favorite_places/screens/add_new_place.dart';
 import 'package:favorite_places/screens/home.dart';
+import 'package:favorite_places/screens/map.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/theme.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => const HomePage(),
         '/addNewPlace': (ctx) => const AddNewProduct(),
+        '/map': (ctx) => const MapsScreen()
       },
     );
   }
