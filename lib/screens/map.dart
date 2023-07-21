@@ -53,7 +53,7 @@ class _MapsScreenState extends State<MapsScreen> {
           ),
           zoom: 16,
         ),
-        markers: _pickedLocation == null && widget.isSelecting
+        markers: (_pickedLocation == null && widget.isSelecting)
             ? {}
             : {
                 Marker(
